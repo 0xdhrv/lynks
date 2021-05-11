@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "regions": ["iad1"],
+  "builds": [{
+    "src": "/**/*.js",
+    "use": "@now/node"
+  }],
+  "routes":[
+  { "src": "/(?<id>[^/]*)", "dest": "/index.js?id=$id" }
+  ]
+}
